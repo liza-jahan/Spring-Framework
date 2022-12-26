@@ -14,6 +14,7 @@ public class App
     	ApplicationContext context= new FileSystemXmlApplicationContext("beans.xml");
     	Patient patient=(Patient)context.getBean("patient");
     	patient.speak();
+    	System.out.println(patient);
     	((FileSystemXmlApplicationContext)context).close();
     	
     }

@@ -4,5 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="patient" class="com.niha.TestSpringProject.Patient"></bean>
+	<bean id="patient" class="com.niha.TestSpringProject.Patient">
+		<constructor-arg value="1" name="id"></constructor-arg>
+		<constructor-arg value="Tom" name="name"></constructor-arg>
+	</bean>
 </beans>
