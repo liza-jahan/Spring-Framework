@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+
+	<bean id="Patient"
+		class="com.livingoncodes.test.Tutorial6.Patient"
+		factory-method="getInstance" p:address-ref="Address" 
+		c:id="7" c:name="Niha">
+
+
+	
+		<property name="nationalId" value="1234"></property>
+		<property ref="Address" name="address"></property>
+	</bean>
+
+	<bean id="Address"
+		class="com.livingoncodes.test.Tutorial6.Address">
+		<constructor-arg name="postcode" value="1200"></constructor-arg>
+		<constructor-arg name="street" value="panthapoth"></constructor-arg>
+	</bean>
+	<bean id="Address2"
+		class="com.livingoncodes.test.Tutorial6.Address" p:street="Mirpur"
+		p:postcode="2345">
+
+	</bean>
+</beans>
