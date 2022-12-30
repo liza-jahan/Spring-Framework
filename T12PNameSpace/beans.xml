@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-init-method="Init" default-destroy-method="Destroy"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+
+	<bean id="Patient"
+		class="com.livingoncodes.spring.test3.TutorialEightF.Patient"
+		scope="singleton" init-method="onCreate" destroy-method="onDestory" factory-method="getInstance">
+	    
+
+
+		<constructor-arg index="0" value="1"></constructor-arg>
+		<constructor-arg index="1" value="Tom"></constructor-arg>
+		<property name="nationalId" value="1234"></property>
+		<property ref="Address" name="address"></property>
+	</bean>
+
+	<bean id="Address"
+		class="com.livingoncodes.spring.test3.TutorialEightF.Address">
+		<constructor-arg name="postcode" value="1200"></constructor-arg>
+		<constructor-arg name="street" value="panthapoth"></constructor-arg>
+	</bean>
+	
+		<bean id="Address2"
+		class="com.livingoncodes.spring.test3.TutorialEightF.Address" p:street="Mirpur" p:postcode="2345">
+
+	</bean>
+</beans>
