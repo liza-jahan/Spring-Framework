@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+
+
+
+	<bean id="patient"
+		class="com.livingoncodes.test.Tutorial6.Patient">
+		<property name="emergencyContacts">
+			<list>
+				<ref bean="contract1" />
+				<ref bean="contract2" />
+				<ref bean="contract3" />
+				<ref bean="contract4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="contract1"
+		class="com.livingoncodes.test.Tutorial6.EmergencyContact">
+		<property name="name" value="mita"></property>
+		<property name="phoneNumber" value="1785598707"></property>
+	</bean>
+
+
+	<bean id="contract2"
+		class="com.livingoncodes.test.Tutorial6.EmergencyContact">
+		<property name="name" value="nila"></property>
+		<property name="phoneNumber" value="1785598707"></property>
+	</bean>
+
+
+	<bean id="contract3"
+		class="com.livingoncodes.test.Tutorial6.EmergencyContact">
+		<property name="name" value="prita"></property>
+		<property name="phoneNumber" value="1785598707"></property>
+	</bean>
+
+
+
+	<bean id="contract4"
+		class="com.livingoncodes.test.Tutorial6.EmergencyContact">
+		<property name="name" value="soni"></property>
+		<property name="phoneNumber" value="1783598707"></property>
+	</bean>
+
+
+</beans>
