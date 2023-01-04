@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byType"
+	default-autowire-candidates="fileWriter,consolWriter">     <!--default-autowire-candidates na dile Bytype ambiguity allow kore na....byName 
+		allow kore -->
+
+	<!-- <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" 
+		default-autowire="byType" default-autowire-candidates="*Writer"> -->
+
+
+	<bean id="consolWriter"
+		class="com.tuorial19.text.T19AutoWearing.ConsolWriter"></bean>
+	<bean id="fileWriter"
+		class="com.tuorial19.text.T19AutoWearing.FileWriter"></bean>
+	<bean id="fileWriter2"
+		class="com.tuorial19.text.T19AutoWearing.FileWriter"></bean>
+
+	<!-- <bean id="whatEver" class="com.tuorial19.text.T19AutoWearing.FileWriter"></bean> -->
+	<bean id="logger" class="com.tuorial19.text.T19AutoWearing.Logger"></bean>
+
+</beans>
