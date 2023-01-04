@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="consolWriter"
+		class="com.tuorial19.text.T19AutoWearing.ConsolWriter"></bean>
+	<bean id="fileWriter"
+		class="com.tuorial19.text.T19AutoWearing.FileWriter"></bean>
+	<bean id="logger" class="com.tuorial19.text.T19AutoWearing.Logger" autowire="byType"></bean>
+	
+</beans>
